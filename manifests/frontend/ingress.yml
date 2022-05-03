@@ -1,9 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: "komodor-demo-ing"
-  annotations:
-    kubernetes.io/ingress.class: ambassador
+  name: "demo-ing"
 spec:
   rules:
   - http:
