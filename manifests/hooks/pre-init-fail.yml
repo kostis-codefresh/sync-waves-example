@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: dummy-fail-
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/sync-wave: "5" 
+spec:
+  template:
+    spec:
+      containers:
+      - name: dummy-fail
+        image: alpine
+        command:
+          - "exit"
+          - "1"
+      restartPolicy: Never
+  backoffLimit: 2    
