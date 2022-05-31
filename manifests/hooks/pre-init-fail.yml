@@ -13,6 +13,6 @@ spec:
       - name: dummy-fail
         image: alpine
         command:
-          - "false"
+          - "true"
       restartPolicy: Never
   backoffLimit: 2    

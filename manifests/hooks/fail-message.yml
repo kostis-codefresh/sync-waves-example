@@ -13,6 +13,6 @@ spec:
       - name: dummy-message
         image: alpine
         command:
-          - "ls"
+          - "false"
       restartPolicy: Never
   backoffLimit: 2    
