@@ -13,7 +13,6 @@ spec:
       - name: dummy-sync-fail
         image: alpine
         command:
-          - "exit"
-          - "1"
+          - "false"
       restartPolicy: Never
   backoffLimit: 2    
